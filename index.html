@@ -31,45 +31,99 @@
   </head>
   <body>
     <h1>Privacy Policy — Settle</h1>
-    <p class="updated">Effective date: July 1, 2026</p>
+    <p class="updated">Effective date: September 2, 2026</p>
 
     <p>
-      Settle is a personal finance tracker. It is designed to keep your data on your device and under
-      your control. This policy explains what Settle does and does not do with your information.
+      Settle is a personal finance tracker. Your accounts, categories, transactions, transfers and
+      recurring rules are stored <strong>on your device</strong>, in a local database. There is no
+      Settle account, no Settle server, and no copy of your finances held by us. We cannot see your
+      data.
     </p>
 
-    <h2>Data stored on your device</h2>
+    <h2>What leaves your device</h2>
+    <p>Settle connects to exactly three things. Two of them only happen if you choose them.</p>
+
+    <h2>1. Exchange rates — always</h2>
     <p>
-      All of the information you enter — accounts, categories, transactions, balances, and settings — is
-      stored locally on your device using an on-device database. Settle has no user accounts and no
-      sign-in. This data is never transmitted to us or to any server, and we never have access to it.
+      Settle fetches public exchange rates from
+      <a href="https://www.exchangerate-api.com/"><code>open.er-api.com</code></a>. This request
+      contains <strong>nothing about you</strong>: no identifier, no amounts, no account details. It
+      asks for today's rates and nothing else. As with any internet request, the rate provider may see
+      your device's IP address; that is standard for network connections and is handled under that
+      provider's own privacy policy.
     </p>
 
-    <h2>Data we collect</h2>
+    <h2>2. monobank — only if you connect it</h2>
+    <p>Bank sync is optional and part of the Pro subscription. If you turn it on:</p>
+    <ul>
+      <li>
+        Your monobank API token is stored in your device's secure storage (Keychain on iOS, Keystore
+        on Android). It is sent <strong>only to monobank's own servers</strong>
+        (<code>api.monobank.ua</code>), to authorise your requests. It is never sent to us, never
+        included in an export or backup file, and never written to a log. Disconnecting deletes it.
+      </li>
+      <li>
+        Settle asks monobank for your list of cards and jars, and for their statements. Those
+        transactions are stored on your device like any others.
+      </li>
+      <li>
+        Settle deliberately does <strong>not</strong> read or store the name or customer id on your
+        monobank profile, even though monobank returns them.
+      </li>
+    </ul>
     <p>
-      We do not collect, store, transmit, sell, or share any personal information. Settle contains no
-      analytics, no advertising, and no third-party tracking.
+      monobank is your own bank, and this connection is between your device and them. What they do
+      with your data is covered by monobank's own privacy policy.
     </p>
 
-    <h2>Importing files</h2>
+    <h2>3. Purchases — only if you subscribe</h2>
     <p>
-      If you import a CSV file, Settle reads the file you select and stores the resulting entries locally
-      on your device. The file and its contents are not uploaded anywhere.
+      Settle Pro is sold through the App Store or Google Play, and subscription status is checked
+      through RevenueCat. RevenueCat receives:
+    </p>
+    <ul>
+      <li>
+        an anonymous identifier generated on your device — it is not your name, email or any account
+        you hold with us, because there is no such account;
+      </li>
+      <li>the purchase receipt from the store, and basic device and platform information.</li>
+    </ul>
+    <p>
+      RevenueCat never receives your financial data, your transactions, or your bank token. It is used
+      solely to tell the app whether your subscription is active.
     </p>
 
-    <h2>Currency exchange rates</h2>
+    <h2>Backups</h2>
+    <ul>
+      <li>
+        <strong>On iOS</strong>, restore points are copied to <strong>your own iCloud Drive</strong>,
+        under your Apple Account. They go to Apple, not to us, and only you can read them.
+      </li>
+      <li>
+        <strong>On Android</strong>, the system's own backup includes Settle's database, under your
+        Google Account. The restore points folder and your saved bank token are deliberately excluded
+        from it.
+      </li>
+      <li><strong>Export files</strong> go only where you send them. Settle does not upload them anywhere.</li>
+    </ul>
+
+    <h2>What Settle never does</h2>
+    <ul>
+      <li>No analytics, no usage tracking, no advertising, and no third-party trackers of any kind.</li>
+      <li>No crash or diagnostics reporting.</li>
+      <li>Nothing is sold or shared with anyone.</li>
+    </ul>
+
+    <h2>Deleting your data</h2>
     <p>
-      To keep multi-currency balances up to date, Settle may request current exchange rates from a
-      third-party service (<a href="https://www.exchangerate-api.com/">exchangerate-api.com</a>). These
-      requests send <strong>no personal or financial information</strong> — they only ask for public
-      rate data. As with any internet request, the rate provider may see your device's IP address; this
-      is standard for network connections and is handled under that provider's own privacy policy.
+      Erasing all data in Settings removes your local database, your saved bank token and the app's
+      copies in iCloud. Deleting the app removes everything stored on the device. To cancel a
+      subscription, use the App Store or Google Play — deleting the app does not cancel it.
     </p>
 
     <h2>Children's privacy</h2>
     <p>
-      Settle is not directed at children and does not knowingly collect any information from anyone,
-      including children.
+      Settle is not directed at children and does not knowingly collect anything from them.
     </p>
 
     <h2>Changes to this policy</h2>
